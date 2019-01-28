@@ -63,3 +63,10 @@ class Queue:
         if len(self.queue) > 0:
             return self.queue.pop()
         return ("No element in the queue")
+
+TheQueue = Queue()
+TheQueue.addtoq("Mon")
+TheQueue.addtoq("Tue")
+TheQueue.addtoq("Wed")
+print(TheQueue.removefromq())
+print(TheQueue.removefromq())
