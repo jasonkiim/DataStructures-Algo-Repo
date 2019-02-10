@@ -11,27 +11,26 @@ class Solution(object):
         :type root: TreeNode
         :rtype: int
         """
+
         stack = []
-        if root is not None:
-            stack.append((1, root))
 
         depth = 0
 
+        if root is not None:
+            stack.append((1, root))
+
         while stack:
-            current_depth, current_tree_node = stack.pop()
-            print current_tree_node.val
+            current_depth, current_node = stack.pop()
             depth = max(depth, current_depth)
-            # doing left or right doesn't matter in this case cuz
-            # we're only focused on depth
-            if current_tree_node.left:
-                stack.append((current_depth+1, current_tree_node.left))
-            if current_tree_node.right:
-                stack.append((current_depth+1, current_tree_node.right))
+            if current_node.left:
+                stack.append((current_depth+1, current_node.left))
+            if current_node.right:
+                stack.append((current_depth+1, current_node.right))
 
         return depth
-
-
     # You're basically including all the treenodes in the stack and evertime you "elevate down"
     # finding either a left/right bc that means theres more depth to the tree.
     # Note that the tree structure is maintained in the input. This means that you can accss node.left
-    # and node.right (if it exists). 
+    # and node.right (if it exists).
+    # Note that we're interested in the maximum "Depth". So we choose to use the "current_depth" and the existing value
+    # of depth to compare the maximum. Then return the depth at the end of the while loop.
