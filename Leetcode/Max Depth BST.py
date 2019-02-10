@@ -33,3 +33,5 @@ class Solution(object):
 
     # You're basically including all the treenodes in the stack and evertime you "elevate down"
     # finding either a left/right bc that means theres more depth to the tree.
+    # Note that the tree structure is maintained in the input. This means that you can accss node.left
+    # and node.right (if it exists). 
