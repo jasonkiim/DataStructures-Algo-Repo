@@ -27,3 +27,11 @@ del dict ;        # delete entire dictionary
 # Iterate through Dictionary
 dic = {}
 for key, value in dic
+
+# Check for existence of a key in a dictionary
+dict = {}
+if key in dict:
+    # If key is in the dictionary, perform something.
+
+if value in dict.values():
+    # If value is in the dictionary, perform something.
