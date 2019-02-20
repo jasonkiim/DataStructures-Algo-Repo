@@ -9,7 +9,7 @@ class Solution(object):
         """
 
         storage = {}
-        for i in range(0, len(nums)):
+        for i in range(len(nums)):
             if target-nums[i] in storage:
                 return [storage[target-nums[i]], i]
             else:
