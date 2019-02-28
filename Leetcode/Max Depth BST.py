@@ -34,3 +34,36 @@ class Solution(object):
     # and node.right (if it exists).
     # Note that we're interested in the maximum "Depth". So we choose to use the "current_depth" and the existing value
     # of depth to compare the maximum. Then return the depth at the end of the while loop.
+
+
+
+"""
+Solution 2: Recursion
+"""
+
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def maxDepth(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+
+        Lets understand the recursive formula. We know that the return type
+        of this function is int, which means everytime we call this func recursively,
+        we want to increment by one.
+
+        So call maxDepth(root.left) and maxDepth(root.right), then get the maximum between the two
+        """
+        if root is None:
+            return 0
+
+        a = self.maxDepth(root.left)+1
+        b = self.maxDepth(root.right)+1
+
+        return max(a,b)
