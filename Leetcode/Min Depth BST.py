@@ -42,9 +42,6 @@ class Solution(object):
 
 
 
-
-
-
 '''
 Leverage the fact that in BFS, we can traverse through the nodes one at a time.
 When we discover that the node does not have left child or right child, then we return the current depth.
