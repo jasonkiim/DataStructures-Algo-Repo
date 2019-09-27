@@ -26,7 +26,7 @@ del dict ;        # delete entire dictionary
 
 # Iterate through Dictionary
 dic = {}
-for key, value in dic
+for key, value in dic.iteritems()
 
 # Check for existence of a key in a dictionary
 dict = {}
