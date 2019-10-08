@@ -8,7 +8,9 @@ class Solution(object):
         # Define neighbor array
         neighbors = [(-1,-1), (-1,0), (-1,1), (0,-1), (0, 1), (1,-1), (1,0), (1, 1)]
 
-        # Basically going to iterate through the row and the length index, and check that the current index of the matrix + neighbor is within the matrix boundary, then perform the necessary live neighbor calculation.
+        # Basically going to iterate through the row and the length index,
+        # and check that the current index of the matrix + neighbor is within 
+        # the matrix boundary, then perform the necessary live neighbor calculation.
 
         # get length and width of the board
         cols = len(board[0])
